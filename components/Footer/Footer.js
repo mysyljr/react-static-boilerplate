@@ -8,20 +8,30 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Link from '../Link';
+import React from 'react'
+import Link from '../Link'
+import {Navbar,NavDropdown,Nav,NavItem,MenuItem} from 'react-bootstrap'
 
-function Footer() {
+
+function Footer(){
   return (
-    <footer style={{
-    backgroundColor:'#eee',
-    position:'fixed',
-    bottom:0,
-    left:0
-    }}>
-      hello
-    </footer>
-  );
+    <Navbar fixedBottom >
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#">React-Bootstrap</a>
+        </Navbar.Brand>
+      </Navbar.Header>
+        <Nav>
+          <Link to="/about">Link</Link>
+          <NavItem eventKey={2} href="#">Link</NavItem>
+
+        </Nav>
+        <Nav pullRight>
+          <NavItem eventKey={1} href="#">Link Right</NavItem>
+          <NavItem eventKey={2} href="#">Link Right</NavItem>
+        </Nav>
+    </Navbar>
+  )
 }
 
-export default Footer;
+export default Footer

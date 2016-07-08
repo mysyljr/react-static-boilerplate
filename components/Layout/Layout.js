@@ -8,20 +8,20 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Header from './Header';
-import Navigation from './Navigation';
-import Footer from '../Footer';
-import s from './Layout.css';
+import React from 'react'
+import Header from './Header'
+import Navigation from './Navigation'
+import Footer from '../Footer'
+import s from './Layout.css'
 
 class Layout extends React.Component {
 
   componentDidMount() {
-    window.componentHandler.upgradeElement(this.refs.root);
+    window.componentHandler.upgradeElement(this.refs.root)
   }
 
   componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.refs.root);
+    window.componentHandler.downgradeElements(this.refs.root)
   }
 
   render() {
@@ -39,8 +39,8 @@ class Layout extends React.Component {
           </main>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout
